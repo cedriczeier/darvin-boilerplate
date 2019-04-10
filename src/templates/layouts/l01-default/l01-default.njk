@@ -4,6 +4,9 @@
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <title>{{ title }}</title>
+
+      <link rel="preload" href="{{ darvin.serverBase }}{{ darvin.serverAssets }}/assets/fonts/museo-700.woff" as="font" type="font/woff" crossorigin>
+
       <meta name="description" content="Lorem description">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="format-detection" content="telephone=no">
@@ -22,6 +25,33 @@
       <meta property="og:description" content="lorem impsun" />
       <meta property="og:image" content="https://www.tobiasfrei.ch" />
       <meta property="og:locale" content="ch" />
+
+      <script>
+        (function() {
+          if( "fonts" in document ) {
+            // Optimization for Repeat Views
+            if( sessionStorage.fontsLoadedCriticalFoftPreload ) {
+              document.documentElement.className += " fonts-loaded-2";
+              return;
+            }
+
+            document.fonts.load("MuseoSubset").then(function () {
+              document.documentElement.className += " fonts-loaded-1";
+              Promise.all([
+                document.fonts.load("Museo500"),
+                document.fonts.load("Museo700"),
+                document.fonts.load("MuseoSans500"),
+                document.fonts.load("MuseoSan700")
+              ]).then(function () {
+                document.documentElement.className += " fonts-loaded-2";
+                // Optimization for Repeat Views
+                sessionStorage.fontsLoadedCriticalFoftPreload = true;
+              });
+            });
+          }
+        })();
+       </script>
+
    </head>
    <body>
       <div id="l-pagewrapper">

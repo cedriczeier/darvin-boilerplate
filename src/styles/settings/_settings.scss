@@ -9,7 +9,11 @@ $base-font-size-unit: 16;
 
 //== Font Family
 //
-$font-1: "Roboto", Arial, sans-serif !default;
+//$font-1: "Roboto", Arial, sans-serif !default;
+$font-subset: "MuseoSubset";
+$font-1: serif;
+$font-2: "Museo";
+$font-3: "MuseoSans";
 $color1: #000000 !default;
 $color2: #ffffff !default;
 $color3: #a8a7a7 !default;

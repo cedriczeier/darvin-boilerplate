@@ -193,3 +193,33 @@ ol {
     }
   }
 }
+
+
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-family: serif;
+}
+
+
+
+.fonts-loaded-1 {
+  h1 {
+    font-family: MuseoSubset;
+  }
+}
+
+.fonts-loaded-2 {
+  h1 {
+    font-family: Museo700;
+  }
+}
+
+.fonts-loaded-2 {
+  p {
+    font-family: MuseoSans500;
+  }
+}
+

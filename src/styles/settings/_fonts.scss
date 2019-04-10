@@ -1,6 +1,6 @@
 /* ==|====================
    Settings / Fonts
-   ======================= */
+
 
 @font-face {
   font-weight: 400;
@@ -16,4 +16,67 @@
   font-style: normal;
 
   src: url("../assets/fonts/roboto-v18-latin-700.woff2") format("woff2");
+}======================= */
+
+/* Web Fonts  */
+
+
+@font-face {
+  font-family: MuseoSans500;
+  src: url('../assets/fonts/museo-sans-500.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: MuseoSans700;
+  src: url('../assets/fonts/museo-sans-700.woff') format('woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Museo500;
+  src: url('../assets/fonts/museo-500.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Museo700;
+  src: url('../assets/fonts/museo-700.woff') format('woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: MuseoSubset;
+  src: url('../assets/fonts/museo-700.woff') format('woff');
+  font-weight: 700;
+  unicode-range: U+000-5FF;
+}
+
+
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-family: serif;
+}
+
+
+
+.fonts-loaded-1 {
+  h1 {
+    font-family: MuseoSubset;
+  }
+}
+
+.fonts-loaded-2 {
+  h1 {
+    font-family: Museo700;
+  }
+}
+
+.fonts-loaded-2 {
+  p {
+    font-family: MuseoSans500;
+  }
 }
