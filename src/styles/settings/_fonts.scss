@@ -22,61 +22,32 @@
 
 
 @font-face {
-  font-family: MuseoSans500;
-  src: url('../assets/fonts/museo-sans-500.woff') format('woff');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: MuseoSans700;
-  src: url('../assets/fonts/museo-sans-700.woff') format('woff');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: Museo500;
-  src: url('../assets/fonts/museo-500.woff') format('woff');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: Museo700;
-  src: url('../assets/fonts/museo-700.woff') format('woff');
-  font-weight: 700;
-}
-
-@font-face {
   font-family: MuseoSubset;
   src: url('../assets/fonts/museo-700.woff') format('woff');
   font-weight: 700;
   unicode-range: U+000-5FF;
 }
 
-
-body {
-  font-family: sans-serif;
+@font-face {
+  font-family: Museo;
+  src: url('../assets/fonts/museo-500.woff') format('woff');
+  font-weight: 500;
 }
 
-h1 {
-  font-family: serif;
+@font-face {
+  font-family: Museo;
+  src: url('../assets/fonts/museo-700.woff') format('woff');
+  font-weight: 700;
 }
 
-
-
-.fonts-loaded-1 {
-  h1 {
-    font-family: MuseoSubset;
-  }
+@font-face {
+  font-family: MuseoSans;
+  src: url('../assets/fonts/museo-sans-500.woff') format('woff');
+  font-weight: 500;
 }
 
-.fonts-loaded-2 {
-  h1 {
-    font-family: Museo700;
-  }
-}
-
-.fonts-loaded-2 {
-  p {
-    font-family: MuseoSans500;
-  }
+@font-face {
+  font-family: MuseoSans;
+  src: url('../assets/fonts/museo-sans-700.woff') format('woff');
+  font-weight: 700;
 }

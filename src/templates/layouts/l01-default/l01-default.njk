@@ -32,21 +32,23 @@
             // Optimization for Repeat Views
             if( sessionStorage.fontsLoadedCriticalFoftPreload ) {
               document.documentElement.className += " fonts-loaded-2";
+              console.log("Loaded from Cache")
               return;
             }
 
-            document.fonts.load("MuseoSubset").then(function () {
+            document.fonts.load("700 1em MuseoSubset").then(function () {
               document.documentElement.className += " fonts-loaded-1";
+              console.log(document.fonts);
               Promise.all([
-                document.fonts.load("Museo500"),
-                document.fonts.load("Museo700"),
-                document.fonts.load("MuseoSans500"),
-                document.fonts.load("MuseoSan700")
+                document.fonts.load("500 1em Museo")
               ]).then(function () {
                 document.documentElement.className += " fonts-loaded-2";
                 // Optimization for Repeat Views
                 sessionStorage.fontsLoadedCriticalFoftPreload = true;
+                console.log("Fonts Loaded")
               });
+
+              console.log(document.fonts);
             });
           }
         })();

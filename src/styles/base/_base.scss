@@ -23,12 +23,16 @@ html {
 }
 
 body {
-  font-weight: 400;
+  font-weight: 500;
   font-size: $base-font-size;
-  font-family: $font-1;
+  font-family: $font-0;
   color: $color1;
   letter-spacing: 0.025rem;
   background-color: $color2;
+
+  .fonts-loaded-2 & {
+    font-family: $font-1, $font-0;
+  }
 }
 
 body,
@@ -44,16 +48,19 @@ html {
 
 .h1-alike,
 h1 {
-  @extend %header-base;
+  @extend %antialiased;
+  font-family: $font-1;
+  font-weight: 700;
   margin: 0;
   padding: $space-medium 0;
   line-height: 1.2;
-  font-family: $font-1;
 }
 
 .h2-alike,
 h2 {
-  @extend %header-base;
+  @extend %antialiased;
+  font-family: $font-1;
+  font-weight: 700;
   margin: 0;
   padding: $space-small 0;
   font-size: rem(24);
@@ -62,11 +69,11 @@ h2 {
 
 .h3-alike,
 h3 {
-  @extend %header-base;
-  font-weight: 600;
+  @extend %antialiased;
+  font-family: $font-1;
+  font-weight: 700;
   font-size: rem(20);
   line-height: 1.5;
-  font-family: $font-1;
   font-style: normal;
 }
 
@@ -74,13 +81,13 @@ h3 {
 h4,
 h5,
 h6 {
-  @extend %header-base;
+  @extend %antialiased;
+  font-family: $font-1;
+  font-weight: 700;
   margin: 0;
   padding: em(21) 0 em(8);
-  font-weight: 600;
   font-size: em(17);
   line-height: 1.5;
-  font-family: $font-1;
   font-style: normal;
   @media #{$medium-up} {
     font-size: em(19);
@@ -193,33 +200,3 @@ ol {
     }
   }
 }
-
-
-body {
-  font-family: sans-serif;
-}
-
-h1 {
-  font-family: serif;
-}
-
-
-
-.fonts-loaded-1 {
-  h1 {
-    font-family: MuseoSubset;
-  }
-}
-
-.fonts-loaded-2 {
-  h1 {
-    font-family: Museo700;
-  }
-}
-
-.fonts-loaded-2 {
-  p {
-    font-family: MuseoSans500;
-  }
-}
-
