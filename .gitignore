@@ -130,6 +130,9 @@ sftp-config.json
 .settings/
 .vscode/
 
+### Webstorm ###
+.idea
+
 ### Darvin ###
 dist/
 log/
