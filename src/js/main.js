@@ -10,4 +10,5 @@ import '../styles/main.scss';
 import './main.config';
 
 import '../templates/modules/m01-accordion/main.js';
+import '../templates/modules/m02-two-column/main.js';
 

@@ -9,3 +9,16 @@
     clear: both;
   }
 }
+
+@mixin grid($gap: null, $gap-outside: $grid-gap-outside) {
+  @if $gap == null {
+    $gap: $grid-gap;
+  }
+
+  display: grid;
+  grid-column-gap: $gap;
+  @if $gap-outside != 0 {
+    padding-left: $gap-outside;
+    padding-right: $gap-outside;
+  }
+}

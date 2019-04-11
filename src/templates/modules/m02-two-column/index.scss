@@ -1,0 +1,17 @@
+/* ==|====================
+   Modules / m02-two-column
+======================= */
+.banner {
+  @include grid();
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.banner__text {
+  grid-column: 2 / span 5;
+}
+
+.banner__img {
+  grid-column: 7 / span 5;
+}
+
+
